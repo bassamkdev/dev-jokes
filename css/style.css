@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Chilanka&display=swap");
 * {
   margin: 0;
   padding: 0; }
@@ -2240,7 +2241,7 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Chilanka", cursive;
   font-size: 1.6rem;
   font-weight: 400; }
 
@@ -2263,23 +2264,46 @@ body {
 .clip {
   background-color: black;
   clip-path: polygon(0 7%, 100% 19%, 100% 71%, 75% 75%, 75% 100%, 50% 75%, 0 80%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 10rem;
-  margin-top: -15rem;
-  height: 25rem;
-  width: 50rem;
-  position: relative; }
+  margin-top: -30rem;
+  height: 40rem;
+  width: 60rem;
+  z-index: 10;
+  position: relative;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; }
   @media (max-width: 56.25em) {
     .clip {
       margin-bottom: -7rem; } }
 
 .quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  width: 90%;
+  width: 95%;
   height: 85%;
-  padding: 6rem;
+  padding: 2rem;
   text-align: center;
   clip-path: polygon(0 7%, 100% 19%, 100% 71%, 75% 75%, 75% 100%, 50% 75%, 0 80%); }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(80%, 20%); }
+  20% {
+    opacity: 0; }
+  80% {
+    transform: translateX(-10%); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
